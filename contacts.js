@@ -10,7 +10,7 @@ async function listContacts() {
 
 async function getContactById(contactId) {
   const contacts = await listContacts();
-  const fileReadContact = contacts.find(({ id }) => id === contactId);
+  const fileReadContact = contacts.find(({ id }) => id === parseInt(contactId));
   return fileReadContact;
 }
 
